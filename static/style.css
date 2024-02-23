@@ -1,0 +1,32 @@
+.navbar_right{
+    padding-left: 200px;
+}
+.cont{
+    background-image: url("images/assessment5_home.jpeg");
+    padding-top: 300px;
+    text-align: center;
+    height: 100vh;
+}
+.cont .tit1{
+    color: white;
+}
+.cont .para{
+    color: white;
+}
+.cont .parb{
+    color: white;
+}
+.cont button a{
+    text-decoration: none;
+    color: green;
+}
+.teach{
+    text-align: center;
+}
+.teach button a{
+    text-decoration: none;
+    color: yellow;
+}
+.stud{
+    text-align: center;
+}
