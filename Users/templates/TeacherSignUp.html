@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% block heading %}
-    <h1 class="stud_sign_up_title text-md-center text-info">SIGN UP FORM</h1>
-    <h2 class="stud_sign_up_welcome text-md-center text-secondary">Welcome, fill in the fields to sign up as a student in the Online Examination System</h2>
 {% endblock %}
 {% block content %}
-<div class="stud_sign_up_form text-md-center bg-warning px-md-5 py-md-5">
+<div class="teach_sign_up_form text-md-center bg-warning px-md-5 py-md-5">
     <form>
     <label for="FirstName">First Name:</label>
         <input type="text" name="FirstName" id="FirstName" placeholder="Your First Name">
@@ -12,17 +10,32 @@
         <input type="text" name="MiddleName" id="MiddleName" placeholder="Your Middle Name">
     <label for="LastName">Last Name:</label>
         <input type="text" name="LastName" id="LastName" placeholder="Your Last Name"><br><br>
+    <label for="username">Username</label>
+        <input type="text" name="username" id="username"><br><br>
     <label for="email">Email:</label>
         <input type="email" name="email" id="email">
     <label for="password">Password:</label>
         <input type="password" name="password" id="password">
     <label for="confirm_password">Confirm Password:</label>
         <input type="password" name="confirm_password" id="confirm_password"><br><br>
-    <label for="PhoneNumber">Parent Phone Number:</label>
+    <label for="PhoneNumber">Phone Number:</label>
         <input type="number" name="PhoneNumber" id="PhoneNumber" placeholder="Your Phone Number">
     <label for="DateOfBirth">Date Of Birth:</label>
         <input type="date" name="DateOfBirth" id="DateOfBirth"><br><br>
-    <label for="gender">Gender:</label>
+    <label for="TSCNo">TSC Number</label>
+        <input type="text" name="TSCNo" id="TSCNo" placeholder="Your TSC Number"><br><br>
+    <label for="status">Marital Status</label><br>
+        <input type="radio" name="status" id="single">
+    <label for="single">Single</label>
+        <input type="radio" name="status" id="engaged">
+    <label for="engaged">Engaged</label>
+        <input  type="radio" name="status" id="married">
+    <label for="married">Married</label>
+        <input type="radio" name="status" id="divorced">
+    <label for="divorced">Divorced</label>
+        <input type="radio" name="widowed" id="widowed">
+    <label for="widowed">Widowed</label><br><br>
+    <label for="gender">Gender</label><br>
     <label for="male">Male</label>
         <input type="radio" name="gender" id="male" checked>
     <label for="female">Female</label>

@@ -29,3 +29,11 @@ def stud_signup(request):
 
 def stud_login(request):
     return render(request, 'StudentLogin.html')
+
+
+def teacher_signup(request):
+    return render(request, 'teacherSignUp.html')
+
+
+def teacher_login(request):
+    return render(request, 'teacherLogin.html')
