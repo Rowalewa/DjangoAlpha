@@ -21,3 +21,11 @@ def contact(request):
 
 def admins(request):
     return render(request, 'admins.html')
+
+
+def stud_signup(request):
+    return render(request, 'StudentSignUp.html')
+
+
+def stud_login(request):
+    return render(request, 'StudentLogin.html')
