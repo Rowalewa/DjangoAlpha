@@ -1,0 +1,55 @@
+CharField - character field
+ {{ form.as_p}} - styling django form spacing
+ {{ form.as_table}} - as horizontal
+ {{ form.as_ul}} - as bullets
+
+ {% csrf_token %} - for security purposes ; a security feature to prevent
+ Model form
+ creating a form using models where create forms with many instances and allows saving data in a database
+ model form is created in application's models.py with similar structure as forms.py only a few changes
+ Django forms do not save in database, they just query.
+
+
+
+                                                                                forms.py
+ from django import forms
+
+from Users.models import Contact
+
+
+class StudentForm(forms.Form):
+    name = forms.CharField(label='Enter Your Name', max_length=50, required=True)
+    email = forms.CharField(label='Enter Your Email', max_length=50, required=True)
+    password = forms.CharField(label='Enter Your Password', max_length=50, required=True)
+    age = forms.IntegerField(label='Enter Your Age', required=True, min_value=18)
+    check = forms.BooleanField(label='Do you want to subscribe for email updates')
+    category = forms.ChoiceField(choices=[('student', 'Student'),
+                                          ('teacher', 'teacher'),
+                                          ('parent', 'parent')])
+
+class StudentComplains(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['name', 'email', 'message']  # passes them as a list
+
+
+THE MODELS FORM IS ALSO REGISTERED IN forms.py
+
+
+
+                                                        models.py
+from django.db import models
+
+
+# Create your models here.
+class Contact(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+                                                        admins.py
+ admin.site.register(<model_name>) - registering a model in admin.py

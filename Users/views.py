@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from Users.forms import StudentForm, StudentComplains
+
 
 # Create your views here.
 
@@ -32,8 +34,18 @@ def stud_login(request):
 
 
 def teacher_signup(request):
-    return render(request, 'teacherSignUp.html')
+    return render(request, 'TeacherSignUp.html')
 
 
 def teacher_login(request):
-    return render(request, 'teacherLogin.html')
+    return render(request, 'TeacherLogin.html')
+
+
+def student_signup(request):
+    form = StudentForm
+    return render(request, 'StudentSignUp.html', {'form': form})
+
+
+def student_login(request):
+    form = StudentComplains
+    return render(request, 'StudentLogin.html', {'form': form})

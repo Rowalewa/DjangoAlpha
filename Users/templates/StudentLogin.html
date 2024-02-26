@@ -9,4 +9,9 @@
         <input type="password" name="password" id="password" placeholder="Password"><br><br>
     <input type="submit" name="submit" value="Log In" class="btn btn-danger">
     </form>
+    <form action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="submit">Submit</button>
+    </form>
 {% endblock %}
