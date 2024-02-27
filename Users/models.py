@@ -9,3 +9,12 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Feedback(models.Model):
+    username = models.CharField(max_length=50)
+    email = models.EmailField()
+    feedback = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.username

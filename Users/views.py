@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from Users.forms import StudentForm, StudentComplains
+from Users.forms import StudentForm, StudentComplains, TeacherFeedback
 
 
 # Create your views here.
@@ -38,7 +38,8 @@ def teacher_signup(request):
 
 
 def teacher_login(request):
-    return render(request, 'TeacherLogin.html')
+    form = TeacherFeedback
+    return render(request, 'TeacherLogin.html', {'form': form})
 
 
 def student_signup(request):

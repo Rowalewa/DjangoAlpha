@@ -1,6 +1,6 @@
 from django import forms
 
-from Users.models import Contact
+from Users.models import Contact, Feedback
 
 
 class StudentForm(forms.Form):
@@ -19,3 +19,8 @@ class StudentComplains(forms.ModelForm):
         model = Contact  # name of the field
         fields = ['name', 'email', 'message']  # passes them as a list
 
+
+class TeacherFeedback(forms.ModelForm):
+    class Meta:
+        model = Feedback
+        fields = ['username', 'email', 'feedback']
