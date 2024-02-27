@@ -1,6 +1,6 @@
 from django import forms
 
-from Users.models import Contact, Feedback
+from Users.models import Contact, Feedback, Registration
 
 
 class StudentForm(forms.Form):
@@ -24,3 +24,19 @@ class TeacherFeedback(forms.ModelForm):
     class Meta:
         model = Feedback
         fields = ['username', 'email', 'feedback']
+
+
+class TeacherComplains(forms.Form):
+    first_name = forms.CharField(label='Enter Your Name', max_length=50, required=True)
+    last_name = forms.CharField(label='Enter Your Last Name', max_length=10, required=True)
+    email = forms.EmailField()
+    password = forms.CharField(widget=forms.PasswordInput)
+    confirm_password = forms.CharField(widget=forms.PasswordInput)
+
+
+class RegisterForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+
+    class Meta:
+        model = Registration
+        fields = ['first_name', 'last_name', 'email', 'password']

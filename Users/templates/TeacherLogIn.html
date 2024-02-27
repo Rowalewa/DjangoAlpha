@@ -2,9 +2,9 @@
 {% block heading %}
 {% endblock %}
 {% block content %}
-   <form action="">
+   <form action="" class="bg-warning  text-md-center px-md-5 py-md-5" >
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" name="submit">Submit</button>
+    <button type="submit" name="submit" class="btn btn-info">Submit</button>
     </form>
 {% endblock %}

@@ -53,3 +53,9 @@ class Contact(models.Model):
 
                                                         admins.py
  admin.site.register(<model_name>) - registering a model in admin.py
+
+                    CREATING SUPER USER IN DJANGO ADMIN
+python3 manage.py createsuperuser
+Enter UserName
+Enter Password
+confirm password

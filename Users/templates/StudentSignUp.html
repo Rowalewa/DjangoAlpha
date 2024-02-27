@@ -32,7 +32,7 @@
     <input type="submit" value="Submit" name="submit" id="submit" class="btn btn-primary">
     </form>
 </div>
-<form action="">
+<form action="" class="bg-dark text-white text-md-center py-md-2">
         {% csrf_token %}  {# security feature mandatory #}
     {{ form.as_p}}  {# form embedded in template #}
     <button type="submit" name="submit">Submit</button>

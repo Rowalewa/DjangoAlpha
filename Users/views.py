@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from Users.forms import StudentForm, StudentComplains, TeacherFeedback
+from Users.forms import StudentForm, StudentComplains, TeacherFeedback, TeacherComplains, RegisterForm
 
 
 # Create your views here.
@@ -10,7 +10,14 @@ def index(request):
 
 
 def teachers(request):
-    return render(request, 'teachers.html')
+    form = RegisterForm()  # empty form
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)  # whatever typed is saved in this form
+        if form.is_valid():
+            form.save()
+    else:  # if not post, then just give an empty form
+        form = RegisterForm()
+    return render(request, 'teachers.html', {'form': form})
 
 
 def students(request):
@@ -19,10 +26,6 @@ def students(request):
 
 def contact(request):
     return render(request, 'contact.html')
-
-
-def admins(request):
-    return render(request, 'admins.html')
 
 
 def stud_signup(request):
@@ -34,7 +37,8 @@ def stud_login(request):
 
 
 def teacher_signup(request):
-    return render(request, 'TeacherSignUp.html')
+    form = TeacherComplains
+    return render(request, 'TeacherSignUp.html', {'form': form})
 
 
 def teacher_login(request):

@@ -24,7 +24,6 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('teachers/', views.teachers, name='teachers'),
     path('students/', views.students, name='students'),
-    path('admins/', views.admins, name='admins'),
     path('contact/', views.contact, name='contact'),
     path('StudentSignUp/', views.student_signup, name='stud_signup'),
     path('StudentLogin/', views.student_login, name='stud_login'),

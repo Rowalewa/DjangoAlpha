@@ -45,4 +45,11 @@
     <input type="submit" value="Submit" name="submit" id="submit" class="btn btn-primary">
     </form>
 </div>
+    <form action="" class="bg-info text-dark-emphasis text-md-center">
+    <h1 class="text-white">Teacher Complains</h1>
+    <h3>Please Fill the form Below:</h3>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="submit">Submit</button>
+    </form>
 {% endblock %}
