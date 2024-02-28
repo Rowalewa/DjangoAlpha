@@ -1,41 +1,35 @@
-.navbar_right{
-    padding-left: 200px;
-}
 .cont{
     background-image: url("images/assessment5_home.jpeg");
-    padding-top: 300px;
     text-align: center;
     height: 100vh;
+    padding-top: 16%;
 }
 .cont .tit1{
     color: white;
+    font-size: 50px;
+    font-weight: lighter;
 }
 .cont .para{
     color: white;
 }
-.cont .parb{
-    color: white;
-}
 .cont button a{
     text-decoration: none;
-    color: green;
+    color: white;
 }
 .teach{
     text-align: center;
 }
-.teach button a{
-    text-decoration: none;
-    color: yellow;
-}
 .stud{
     text-align: center;
 }
-.my_form{
-    background-color: yellow;
+.stud_sign_up_frm{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 40px;
 }
-.frm{
-    background-color: #20c997;
-}
-.stud_form_sign_up{
-    background-color: greenyellow;
+form .teach_form{
+    text-align: center;
+    background-color: magenta;
+    width: 50%;
 }
